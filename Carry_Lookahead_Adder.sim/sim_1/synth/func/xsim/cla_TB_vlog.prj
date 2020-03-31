@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"cla_TB_func_synth.v" \
+
+sv xil_defaultlib  \
+"../../../../../Carry_Lookahead_Adder.srcs/sim_1/new/cla_TB.sv" \
+
+# Do not sort compile order
+nosort

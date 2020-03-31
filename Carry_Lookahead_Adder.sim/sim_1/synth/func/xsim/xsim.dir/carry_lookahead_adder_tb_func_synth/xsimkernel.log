@@ -1,0 +1,4 @@
+Running: xsim.dir/carry_lookahead_adder_tb_func_synth/xsimk -simmode gui -wdb carry_lookahead_adder_tb_func_synth.wdb -simrunnum 0 -socket 48697
+Design successfully loaded
+Design Loading Memory Usage: 44892 KB (Peak: 44892 KB)
+Design Loading CPU Usage: 70 ms

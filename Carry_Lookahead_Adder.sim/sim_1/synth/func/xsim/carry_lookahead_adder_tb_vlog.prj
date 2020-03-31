@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"carry_lookahead_adder_tb_func_synth.v" \
+
+sv xil_defaultlib  \
+"../../../../../Carry_Lookahead_Adder.srcs/sim_1/new/carry_lookahead_adder_tb.sv" \
+
+# Do not sort compile order
+nosort
