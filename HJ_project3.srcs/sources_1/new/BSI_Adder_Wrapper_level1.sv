@@ -43,7 +43,7 @@ module CLA_Adder_Wrapper_level1  #(parameter size_of_vectors = 32, Word_size = 8
     wire done_mem_A, done_mem_B;
     wire [ Desired_Quantization:0 ] R0 [ Word_size-1 :0 ];
     wire en_mem = en_5;
-    wire mem_input_state = done_mem_A & done_mem_B ; // have memory slices been prepared i.e. after 8 clock cycles it will be 1
+//    wire mem_input_state = done_mem_A & done_mem_B ; // have memory slices been prepared i.e. after 8 clock cycles it will be 1
     
 //    wire [Word_size-1:0] en_32_local, mux_sel_32_local;
 //    assign en_32_local = (done_mem_A & done_mem_B) ? en_32 : 8'b0;
