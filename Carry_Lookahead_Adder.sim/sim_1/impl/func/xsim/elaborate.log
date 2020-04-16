@@ -284,6 +284,8 @@ Compiling module xil_defaultlib.full_adder__9
 Compiling module xil_defaultlib.full_adder__10
 Compiling module xil_defaultlib.carry_lookahead_adder
 Compiling module xil_defaultlib.CLA_Adder_Top
+Compiling module unisims_ver.latchsre_ldce
+Compiling module unisims_ver.LDCE
 Compiling module xil_defaultlib.CLA_Memory_Module__1
 Compiling module xil_defaultlib.CLA_Memory_Module
 Compiling module xil_defaultlib.input_buffer

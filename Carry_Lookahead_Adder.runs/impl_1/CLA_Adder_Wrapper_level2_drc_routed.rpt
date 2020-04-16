@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2.1 (lin64) Build 2729669 Thu Dec  5 04:48:12 MST 2019
-| Date         : Tue Mar 31 14:50:43 2020
+| Date         : Wed Apr 15 21:21:32 2020
 | Host         : ubuntu running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_drc -file CLA_Adder_Wrapper_level2_drc_routed.rpt -pb CLA_Adder_Wrapper_level2_drc_routed.pb -rpx CLA_Adder_Wrapper_level2_drc_routed.rpx
 | Design       : CLA_Adder_Wrapper_level2
@@ -24,12 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 2
+             Violations found: 11
 +----------+------------------+-----------------------------------------------------+------------+
 | Rule     | Severity         | Description                                         | Violations |
 +----------+------------------+-----------------------------------------------------+------------+
 | UCIO-1   | Critical Warning | Unconstrained Logical Port                          | 1          |
 | CFGBVS-1 | Warning          | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| PDRC-153 | Warning          | Gated clock check                                   | 9          |
 +----------+------------------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -50,6 +51,51 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net instance_wrapper_level1/input_buffer_instance/bsi_mem_A/count_reg[5]_i_2_n_11 is a gated clock net sourced by a combinational pin instance_wrapper_level1/input_buffer_instance/bsi_mem_A/count_reg[5]_i_2/O, cell instance_wrapper_level1/input_buffer_instance/bsi_mem_A/count_reg[5]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net instance_wrapper_level1/input_buffer_instance/bsi_mem_A/done_mem_local__0 is a gated clock net sourced by a combinational pin instance_wrapper_level1/input_buffer_instance/bsi_mem_A/done_mem_local_reg_i_1/O, cell instance_wrapper_level1/input_buffer_instance/bsi_mem_A/done_mem_local_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net instance_wrapper_level1/input_buffer_instance/bsi_mem_B/count_reg[5]_i_2_n_11 is a gated clock net sourced by a combinational pin instance_wrapper_level1/input_buffer_instance/bsi_mem_B/count_reg[5]_i_2/O, cell instance_wrapper_level1/input_buffer_instance/bsi_mem_B/count_reg[5]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local_reg[0][31]_i_1_n_11 is a gated clock net sourced by a combinational pin instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local_reg[0][31]_i_1/O, cell instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local_reg[0][31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local_reg[1][31]_i_1_n_11 is a gated clock net sourced by a combinational pin instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local_reg[1][31]_i_1/O, cell instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local_reg[1][31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local_reg[2][31]_i_1_n_11 is a gated clock net sourced by a combinational pin instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local_reg[2][31]_i_1/O, cell instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local_reg[2][31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local_reg[3][31]_i_1_n_11 is a gated clock net sourced by a combinational pin instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local_reg[3][31]_i_1/O, cell instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local_reg[3][31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local_reg[4][31]_i_1_n_11 is a gated clock net sourced by a combinational pin instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local_reg[4][31]_i_1/O, cell instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local_reg[4][31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net instance_wrapper_level1/input_buffer_instance/bsi_mem_B/done_mem_local__0 is a gated clock net sourced by a combinational pin instance_wrapper_level1/input_buffer_instance/bsi_mem_B/done_mem_local_reg_i_1/O, cell instance_wrapper_level1/input_buffer_instance/bsi_mem_B/done_mem_local_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

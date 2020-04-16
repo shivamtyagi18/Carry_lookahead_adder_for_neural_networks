@@ -29,8 +29,11 @@ module CLA_Memory_Module  #(parameter Word_size = 8, Quantization = 32)(
     integer i;
     
     reg [5:0] count = 5'b0;  // bitsize of each slice, 8 in this case
+    reg [Quantization-1:0] data_out_local [Word_size-1:0];
+    reg done_mem_local;
+
     
-    always @(posedge clock)
+    always @(data_in)
         begin
 //            $display("test1 %b", data_in, count, en);
             if(en) begin
@@ -39,7 +42,7 @@ module CLA_Memory_Module  #(parameter Word_size = 8, Quantization = 32)(
                 begin
                     for (i = 0 ; i < Quantization ; i = i + 1)
                         begin
-                            data_out [count][i] = data_in [i];
+                            data_out_local [count][i] = data_in [i];
                         end
 //                    $display("data out %b",0);
 //                    $display(data_out);
@@ -47,11 +50,20 @@ module CLA_Memory_Module  #(parameter Word_size = 8, Quantization = 32)(
                  end 
                if (count == 8)
                 begin
-                   done_mem =1'b1;
+                   done_mem_local =1'b1;
                    count = 0; 
                 end  
             end
         end
+        
+        always @(posedge clock)
+        begin
+            if(done_mem_local) begin
+                data_out = data_out_local;
+                done_mem = done_mem_local;
+               end  
+        
+        end 
 
 
 //reg [Word_size:0] data_out_local [Quantization-1:0];

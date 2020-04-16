@@ -18,7 +18,6 @@ proc create_report { reportName command } {
   }
 }
 set_param ced.repoPaths /home/shivamtyagi/.Xilinx/Vivado/2019.2/xhub/ced_store
-set_param chipscope.maxJobs 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -32,17 +31,17 @@ set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
 set_property ip_output_repo /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib -sv {
-  /home/shivamtyagi/Carry_Lookahead_Adder/HJ_project3.srcs/sources_1/new/BSI_Adder_Top.v
-  /home/shivamtyagi/Carry_Lookahead_Adder/HJ_project3.srcs/sources_1/new/BSI_Adder_Wrapper_level1.sv
-  /home/shivamtyagi/Carry_Lookahead_Adder/HJ_project3.srcs/sources_1/new/BSI_Memory_Module.sv
-  /home/shivamtyagi/Carry_Lookahead_Adder/HJ_project3.srcs/sources_1/new/bsi_mem_output_side.sv
+  /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Adder_Top.v
+  /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Adder_Wrapper_level1.sv
+  /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Memory_Module.sv
+  /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/bsi_mem_output_side.sv
   /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/new/carry_lookahead_adder.v
   /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/new/full_adder.sv
-  /home/shivamtyagi/Carry_Lookahead_Adder/HJ_project3.srcs/sources_1/new/input_buffer.sv
-  /home/shivamtyagi/Carry_Lookahead_Adder/HJ_project3.srcs/sources_1/new/output_buffer.sv
-  /home/shivamtyagi/Carry_Lookahead_Adder/HJ_project3.srcs/sources_1/new/output_mem_to_R0.sv
+  /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/input_buffer.sv
+  /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/output_buffer.sv
+  /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/output_mem_to_R0.sv
 }
-read_verilog -library xil_defaultlib /home/shivamtyagi/Carry_Lookahead_Adder/HJ_project3.srcs/sources_1/new/BSI_Adder_Wrapper_level2.v
+read_verilog -library xil_defaultlib /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Adder_Wrapper_level2.v
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be

@@ -90,7 +90,7 @@ module cla_TB #(parameter  size_of_vectors = 32, Word_size = 8, Max_Quantization
         
 //        loop to increment the input values
         
-        for (i = 0; i < 200000; i = i + 1)
+        for (i = 0; i < 20; i = i + 1)
             begin
         
                 #40
@@ -99,65 +99,7 @@ module cla_TB #(parameter  size_of_vectors = 32, Word_size = 8, Max_Quantization
         
         end 
         
-//        #40
-//        data_in_A = 32'd 7;
-//        data_in_B = 32'd 4;
-        
-//        #40
-//        data_in_A = 32'd 5;
-//        data_in_B = 32'd 3;
-        
-//        #40
-//        data_in_A = 32'd 0;
-//        data_in_B = 32'd 9;
-        
-//        #40
-//        data_in_A = 32'd 5;
-//        data_in_B = 32'd 8;
-        
-//        #40
-//        data_in_A = 32'd 2;
-//        data_in_B = 32'd 6;
-        
-//        #40
-//        data_in_A = 32'd 6;
-//        data_in_B = 32'd 3;
-        
-//        #40
-//        data_in_A = 32'd 10; 
-//        data_in_B = 32'd 13;
-        
-//        #40
-//        data_in_A = 32'd 6;
-//        data_in_B = 32'd 15;
-        
-//        #40
-//        data_in_A = 32'd 10;
-//        data_in_B = 32'd 7;
-        
-//        #40
-//        data_in_A = 32'd 15;
-//        data_in_B = 32'd 5;
-        
-//        #40
-//        data_in_A = 32'd 8;
-//        data_in_B = 32'd 0;
-        
-//        #40
-//        data_in_A = 32'd 16;
-//        data_in_B = 32'd 5;
-        
-//        #40
-//        data_in_A = 32'd 22;
-//        data_in_B = 32'd 2;
-        
-//        #40
-//        data_in_A = 32'd 16;
-//        data_in_B = 32'd 60;
-        
-//        #40
-//        data_in_A = 32'd 10; 
-//        data_in_B = 32'd 10;
+        $stop;
 
             
         end
