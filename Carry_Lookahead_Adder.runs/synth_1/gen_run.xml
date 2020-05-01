@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1587010782">
-  <File Type="RDS-UTIL-PB" Name="CLA_Adder_Wrapper_level2_utilization_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1588310558">
+  <File Type="VDS-TIMINGSUMMARY" Name="CLA_Adder_Wrapper_level2_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="CLA_Adder_Wrapper_level2.dcp"/>
-  <File Type="PA-TCL" Name="CLA_Adder_Wrapper_level2.tcl"/>
+  <File Type="RDS-UTIL-PB" Name="CLA_Adder_Wrapper_level2_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="CLA_Adder_Wrapper_level2_utilization_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="CLA_Adder_Wrapper_level2_reports.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="CLA_Adder_Wrapper_level2_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="CLA_Adder_Wrapper_level2.vds"/>
+  <File Type="REPORTS-TCL" Name="CLA_Adder_Wrapper_level2_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="CLA_Adder_Wrapper_level2_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="CLA_Adder_Wrapper_level2.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/new/BSI_Adder_Top.v">

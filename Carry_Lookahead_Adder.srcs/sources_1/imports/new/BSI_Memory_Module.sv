@@ -33,16 +33,16 @@ module CLA_Memory_Module  #(parameter Word_size = 8, Quantization = 32)(
     reg done_mem_local;
 
     
-    always @(data_in)
+    always @(posedge clock)
         begin
 //            $display("test1 %b", data_in, count, en);
-            if(en) begin
+            if(en & (data_in >= 0)) begin
 //            $display(data_in);
                if (count < Word_size)  
                 begin
                     for (i = 0 ; i < Quantization ; i = i + 1)
                         begin
-                            data_out_local [count][i] = data_in [i];
+                            data_out_local [count][i] <= data_in [i];
                         end
 //                    $display("data out %b",0);
 //                    $display(data_out);
@@ -59,8 +59,8 @@ module CLA_Memory_Module  #(parameter Word_size = 8, Quantization = 32)(
         always @(posedge clock)
         begin
             if(done_mem_local) begin
-                data_out = data_out_local;
-                done_mem = done_mem_local;
+                data_out <= data_out_local;
+                done_mem <= done_mem_local;
                end  
         
         end 

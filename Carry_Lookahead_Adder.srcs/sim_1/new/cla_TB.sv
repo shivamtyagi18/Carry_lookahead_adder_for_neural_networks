@@ -90,7 +90,7 @@ module cla_TB #(parameter  size_of_vectors = 32, Word_size = 8, Max_Quantization
         
 //        loop to increment the input values
         
-        for (i = 0; i < 20; i = i + 1)
+        for (i = 0; i < 100; i = i + 1)
             begin
         
                 #40

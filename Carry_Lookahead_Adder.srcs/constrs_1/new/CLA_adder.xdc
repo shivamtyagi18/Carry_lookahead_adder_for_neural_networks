@@ -5,6 +5,9 @@ set_input_delay -clock [get_clocks sys_clk_pin] 1.0 [get_ports * -filter {DIRECT
 set_output_delay -clock [get_clocks sys_clk_pin] 2.0 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 
 set_property -dict {PACKAGE_PIN W19 IOSTANDARD LVCMOS33} [get_ports {en_5}]; # Left Button
+
+#create_clock -add -name sys_clk_en -period 40.000 -waveform {0 20.000} [get_ports {en_5}]
+
 #set_property -dict {PACKAGE_PIN T18 IOSTANDARD LVCMOS33} [get_ports {mux_sel_5}]; # Center Button
 #set_property -dict {PACKAGE_PIN T17 IOSTANDARD LVCMOS33} [get_ports {reset}]; # Left Button
 set_property -dict {PACKAGE_PIN W7 IOSTANDARD LVCMOS33} [get_ports {done}]; # CA

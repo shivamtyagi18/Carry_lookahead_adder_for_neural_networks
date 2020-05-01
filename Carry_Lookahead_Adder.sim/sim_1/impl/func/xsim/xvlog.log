@@ -273,3 +273,5 @@ INFO: [VRFC 10-311] analyzing module input_buffer
 INFO: [VRFC 10-311] analyzing module output_buffer
 INFO: [VRFC 10-311] analyzing module output_mem_to_R0
 INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sim_1/new/cla_TB.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cla_TB

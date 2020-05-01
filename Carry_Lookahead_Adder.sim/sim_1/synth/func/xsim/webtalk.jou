@@ -2,8 +2,8 @@
 # Webtalk v2019.2.1 (64-bit)
 # SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
 # IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
-# Start of session at: Mon Mar 30 02:19:24 2020
-# Process ID: 39841
+# Start of session at: Thu Apr 30 22:33:02 2020
+# Process ID: 91285
 # Current directory: /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.sim/sim_1/synth/func/xsim
 # Command line: wbtcv -mode batch -source /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.sim/sim_1/synth/func/xsim/xsim.dir/cla_TB_func_synth/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.sim/sim_1/synth/func/xsim/webtalk.log

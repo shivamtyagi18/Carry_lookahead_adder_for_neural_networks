@@ -12,5 +12,5 @@ open_saif "cla.saif"
 log_saif [get_objects -r *]
 log_wave -r /
 
-run 1000ns
+run 100000000ns
 close_saif
