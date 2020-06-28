@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2.1 (lin64) Build 2729669 Thu Dec  5 04:48:12 MST 2019
-// Date        : Fri May  1 23:08:54 2020
+// Date        : Wed Jun  3 01:35:41 2020
 // Host        : ubuntu running 64-bit Ubuntu 18.04.4 LTS
 // Command     : write_verilog -mode funcsim -nolib -force -file
 //               /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.sim/sim_1/impl/func/xsim/cla_TB_func_impl.v
