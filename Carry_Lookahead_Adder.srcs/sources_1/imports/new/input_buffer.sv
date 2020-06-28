@@ -21,8 +21,8 @@
 
 
 module input_buffer 
-    #(parameter size_of_vectors = 32, Word_size = 8, Max_Quantization = 32, Desired_Quantization=32)(
-        input  [Desired_Quantization-1:0] data_in_A, data_in_B,
+    #(parameter size_of_vectors = 32, Word_size = 8, Max_Quantization = 32, Desired_Quantization=4)(
+        input  [Max_Quantization-1:0] data_in_A, data_in_B,
         input clock, en_mem,
         output  wire [Desired_Quantization-1:0] data_out_A [Word_size-1:0], data_out_B [Word_size-1:0],
         output wire done_mem_A, done_mem_B

@@ -6,3 +6,5 @@ git add .
 git commit -m "Message"
 
 git push -f master  master
+
+git push -u master 4-bit_qunatization_1_block

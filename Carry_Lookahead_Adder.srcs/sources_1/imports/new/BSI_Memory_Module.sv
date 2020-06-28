@@ -20,82 +20,46 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module CLA_Memory_Module  #(parameter Word_size = 8, Quantization = 32)(
-    input [Quantization-1:0] data_in,
+module CLA_Memory_Module  #(parameter Word_size = 8, Max_Quantization = 32,  Desired_Quantization=4)(
+    input [Max_Quantization-1:0] data_in,
     input clock,en,
-    output reg [Quantization-1:0] data_out [Word_size-1:0] ,
+    output reg [Desired_Quantization-1:0] data_out [Word_size-1:0] ,
     output reg done_mem
     );
     integer i;
     
     reg [5:0] count = 5'b0;  // bitsize of each slice, 8 in this case
-    reg [Quantization-1:0] data_out_local [Word_size-1:0];
     reg done_mem_local;
 
     
-    always @(posedge clock)
+    
+  always @(posedge clock)
         begin
 //            $display("test1 %b", data_in, count, en);
             if(en & (data_in >= 0)) begin
 //            $display(data_in);
-               if (count < Word_size)  
-                begin
-                    for (i = 0 ; i < Quantization ; i = i + 1)
+               if (count < Desired_Quantization)  
+                begin 
+                    // to fill values in first Desired_Quantization rows
+                    for (i = 0 ; i <  Word_size ; i = i + 1)
                         begin
-                            data_out_local [count][i] <= data_in [i];
+                            // Max 8 cols are possible when Desired_Quantization is 4 
+                            // Putting values in last 4-bit of each column from 32 bits on input data_in
+                            data_out [i][count] <= data_in [i*Desired_Quantization];                               // Till here if Desired_Quantization == 32
+                            data_out [i][count+1] <= data_in [1+(i*Desired_Quantization)];      
+                            data_out [i][count+2] <= data_in [2 + (i*Desired_Quantization)];  // Till here if Desired_Quantization == 16
+                            data_out [i][count+3] <= data_in [3 + (i*Desired_Quantization)];
+                              // Till here if Desired_Quantization == 4
                         end
-//                    $display("data out %b",0);
-//                    $display(data_out);
-                    count = count + 1;   
+                        
+                         count <= count + (Max_Quantization/Word_size) ;   
                  end 
-               if (count == 8)
+               else if (count == Desired_Quantization)
                 begin
-                   done_mem_local =1'b1;
-                   count = 0; 
+                   done_mem <= 1'b1;
+                   count <= 0; 
                 end  
             end
         end
         
-        always @(posedge clock)
-        begin
-            if(done_mem_local) begin
-                data_out <= data_out_local;
-                done_mem <= done_mem_local;
-               end  
-        
-        end 
-
-
-//reg [Word_size:0] data_out_local [Quantization-1:0];
-    
-//    always @(posedge clock)
-//        begin
-//            if(en) begin
-//            $display("data in: %b",data_in);
-//            $display("count: ", count);
-//            if (count < Word_size + 1)  
-//                begin
-////                    done_mem = 1'b0;
-//                    for (i = 0 ; i < Quantization ; i = i + 1)
-//                        begin
-//                            data_out_local [i][count] = data_in [i];
-//                        end
-//                        $display("data out %b",0);
-//                        $display(data_out_local);
-//                        count = count + 1;       
-//                 end 
-//              if (count == Word_size + 1)
-//                begin
-//                //moving data from data_out_local columns 8 to 1 to data_out columns 7 to 0
-//                for (i = 0 ; i < Quantization ; i = i + 1)
-//                        begin
-//                            data_out[i] = data_out_local [i][Word_size-1:0];
-//                        end
-//                    $display("final data out %b",0);
-//                    $display(data_out);
-//                   done_mem = 1'b1;
-//                   count = 0; 
-//                end  
-//              end
-//        end
 endmodule

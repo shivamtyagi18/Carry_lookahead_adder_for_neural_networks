@@ -10,12 +10,6 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.CLA_Memory_Module
 Compiling module xil_defaultlib.input_buffer
-Compiling module xil_defaultlib.full_adder
-Compiling module xil_defaultlib.carry_lookahead_adder_default
-Compiling module xil_defaultlib.CLA_Adder_Top_default
-Compiling module xil_defaultlib.bsi_mem_output_side_default
-Compiling module xil_defaultlib.output_mem_to_R0
-Compiling module xil_defaultlib.output_buffer
 Compiling module xil_defaultlib.CLA_Adder_Wrapper_level1
 Compiling module xil_defaultlib.CLA_Adder_Wrapper_level2
 Compiling module xil_defaultlib.cla_TB

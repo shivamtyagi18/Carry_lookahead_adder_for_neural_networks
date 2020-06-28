@@ -26,14 +26,14 @@
 // size_of_vector = total number of data points
 
 
-module CLA_Adder_Wrapper_level1  #(parameter size_of_vectors = 32, Word_size = 8, Max_Quantization = 32, Desired_Quantization=32)(
+module CLA_Adder_Wrapper_level1  #(parameter size_of_vectors = 32, Word_size = 8, Max_Quantization = 32, Desired_Quantization=4)(
     input  en_5,
 //     mux_sel_5 ,
   	input clock,
-  	output [Desired_Quantization:0] data_out_for_R0,
+  	output [Max_Quantization:0] data_out_for_R0,
   	output done,
   	output done_addition,
-  	input  [Desired_Quantization-1:0] data_in_A, data_in_B
+  	input  [Max_Quantization-1:0] data_in_A, data_in_B
     ); 
 
     
@@ -68,24 +68,24 @@ module CLA_Adder_Wrapper_level1  #(parameter size_of_vectors = 32, Word_size = 8
 //    .mux_sel_32(mux_sel_32)
 //    );
     
-    (*keep_hierarchy="yes"*) CLA_Adder_Top CLA_Adder_Top_instance(
-//    .en_top(en_32_local),
-  	.clk_top(clock),
-//  	.mux_sel(mux_sel_32_local),
-  	.A(data_out_A),
-  	.B(data_out_B),
-  	.R0(R0),
-    .done_top(done_addition)
-    );
+//    (*keep_hierarchy="yes"*) CLA_Adder_Top CLA_Adder_Top_instance(
+////    .en_top(en_32_local),
+//  	.clk_top(clock),
+////  	.mux_sel(mux_sel_32_local),
+//  	.A(data_out_A),
+//  	.B(data_out_B),
+//  	.R0(R0),
+//    .done_top(done_addition)
+//    );
  
 
-     (*keep_hierarchy="yes"*) output_buffer output_buffer_to_R0(
-        .clock(clock),
-        .done_addition(done_addition),
-  	    .R0 (R0),
-  	    .data_out_for_R0(data_out_for_R0),
-  	    .done(done)
-    );
+//     (*keep_hierarchy="yes"*) output_buffer output_buffer_to_R0(
+//        .clock(clock),
+//        .done_addition(done_addition),
+//  	    .R0 (R0),
+//  	    .data_out_for_R0(data_out_for_R0),
+//  	    .done(done)
+//    );
 
     
 endmodule
