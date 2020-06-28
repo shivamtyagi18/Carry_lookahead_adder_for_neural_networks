@@ -21,12 +21,12 @@
 
 (* keep_hierarchy="yes" *)
 module carry_lookahead_adder
-  #(parameter WIDTH=32)
+  #(parameter WIDTH=4)
   (
    input clock,
-   input [WIDTH-1:0] data_in_A,
-   input [WIDTH-1:0] data_in_B,
-   output reg [WIDTH:0]  data_out_from_R0,
+   input [WIDTH-1:0] q0,
+   input [WIDTH-1:0] q1,
+   output reg [WIDTH:0]  R,
    output reg done
    );
      
@@ -42,8 +42,8 @@ module carry_lookahead_adder
       (* keep_hierarchy="yes" *)
         full_adder full_adder_inst
             ( 
-              .i_bit1(data_in_A[ii]),
-              .i_bit2(data_in_B[ii]),
+              .i_bit1(q0[ii]),
+              .i_bit2(q1[ii]),
               .i_carry(w_C[ii]),
               .o_sum(w_SUM[ii]),
               .o_carry(carry_out[ii])
@@ -59,8 +59,8 @@ module carry_lookahead_adder
   generate
     for (jj=0; jj<WIDTH; jj=jj+1) 
       begin
-        assign w_G[jj]   = data_in_A[jj] & data_in_B[jj];
-        assign w_P[jj]   = data_in_A[jj] | data_in_B[jj];
+        assign w_G[jj]   = q0[jj] & q1[jj];
+        assign w_P[jj]   = q0[jj] | q1[jj];
         assign w_C[jj+1] = w_G[jj] | (w_P[jj] & w_C[jj]);
       end
   endgenerate
@@ -71,7 +71,7 @@ module carry_lookahead_adder
  
  always @(posedge clock)
     begin
-        data_out_from_R0 = data_out; // Verilog Concatenation
+        R = data_out; // Verilog Concatenation
         done = 1'b1;
            
   end

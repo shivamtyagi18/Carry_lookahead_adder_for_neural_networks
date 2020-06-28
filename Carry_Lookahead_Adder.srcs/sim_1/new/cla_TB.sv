@@ -21,28 +21,21 @@
 
 
 module cla_TB #(parameter  size_of_vectors = 32, Word_size = 8, Max_Quantization = 32,  Desired_Quantization=32)(
-    input reg en, 
-//    mux_sel_5 ,
-//     input reg [Max_Quantization-1:0] mux_sel,
+    input reg en,
+    input reg [1:0] Q, 
     input reg clock, reset,
-//    input reg [ Word_size-1:0 ] A [ Max_Quantization-1:0 ], B [ Max_Quantization-1:0 ],
-//    output  wire [ Word_size-1:0 ] R0 [ Max_Quantization :0 ],
-      output [Desired_Quantization:0] data_out_from_R0,
-    
+    output [Max_Quantization+Word_size-1:0] data_out_from_R0,
     input reg [Desired_Quantization-1:0] data_in_A, data_in_B
 //    output [Word_size-1:0] data_out_A [Desired_Quantization-1:0], data_out_B [Desired_Quantization-1:0]
     );
     
     CLA_Adder_Wrapper_level2 instance_tb(
-    .en_5 ( en ),
+    .en ( en ),
+    .Q (Q),
   	.clock (clock),
-//  	.mux_sel_5(mux_sel_5),
-//  	.reset(reset),
   	.data_out_from_R0(data_out_from_R0),
   	.data_in_A(data_in_A),
-//    .data_out_A(data_out_A),
     .data_in_B(data_in_B)
-//    .data_out_B(data_out_B)
     
     );
     
@@ -53,6 +46,7 @@ module cla_TB #(parameter  size_of_vectors = 32, Word_size = 8, Max_Quantization
     
     initial begin
       clock = 0; 
+      Q = 2'b 0;
 //      reset = 1;
     end 
       

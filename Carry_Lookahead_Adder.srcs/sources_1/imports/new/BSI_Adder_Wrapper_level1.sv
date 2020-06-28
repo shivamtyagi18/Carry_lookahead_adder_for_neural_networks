@@ -27,27 +27,29 @@
 
 
 module CLA_Adder_Wrapper_level1  #(parameter size_of_vectors = 32, Word_size = 8, Max_Quantization = 32, Desired_Quantization=4)(
-    input  en_5,
-//     mux_sel_5 ,
+    input  en,
+    input [1:0] Q,
   	input clock,
-  	output [Max_Quantization:0] data_out_for_R0,
+  	output [Max_Quantization+Word_size-1:0] data_out_for_R0,
   	output done,
   	output done_addition,
   	input  [Max_Quantization-1:0] data_in_A, data_in_B
     ); 
 
-    
+    wire [3:0]              counter; 
+    wire                    done_addition_local;                  
+    wire [7:0]              en_to_adder, mux_sel_to_adder;
+    wire                    done_mem_A, done_mem_B;
+    wire [ Desired_Quantization:0 ] R0 [ Word_size-1 :0 ]; // total max 40 slices
+    wire                    en_mem = en;
+    wire                    mem_input_state = done_mem_A & done_mem_B ; // have memory slices been prepared i.e. after 8 clock cycles it will be 1   
+    wire [7 :0]             en_local, mux_sel_local; 
     wire [Desired_Quantization-1:0] data_out_A [Word_size-1:0] , data_out_B [Word_size-1:0];
-   
     wire [Word_size-1:0] en_32, mux_sel_32;
-    wire done_mem_A, done_mem_B;
-    wire [ Desired_Quantization:0 ] R0 [ Word_size-1 :0 ];
-    wire en_mem = en_5;
-//    wire mem_input_state = done_mem_A & done_mem_B ; // have memory slices been prepared i.e. after 8 clock cycles it will be 1
     
-//    wire [Word_size-1:0] en_32_local, mux_sel_32_local;
-//    assign en_32_local = (done_mem_A & done_mem_B) ? en_32 : 8'b0;
-//    assign mux_sel_32_local = (done_mem_A & done_mem_B) ? mux_sel_32 : 32'b0;
+    assign en_local = mem_input_state ? en_to_adder : 8'b0;
+    assign mux_sel_local = mem_input_state ? mux_sel_to_adder : 8'b0;
+
     
     (*keep_hierarchy="yes"*) input_buffer input_buffer_instance (
         .data_in_A(data_in_A), 
@@ -60,32 +62,31 @@ module CLA_Adder_Wrapper_level1  #(parameter size_of_vectors = 32, Word_size = 8
         .done_mem_B(done_mem_B)
     );
     
-//    (*keep_hierarchy="yes"*) enable_generator en_generator_inst(
-//    .clock(clock),
-//    .en_5(en_5),
-//    .en_32(en_32),
-//    .mux_sel_5(mux_sel_5),
-//    .mux_sel_32(mux_sel_32)
-//    );
+     (*keep_hierarchy="yes"*)(* dont_touch = "yes" *) enable_generator en_generator_inst(
+        .clock      (clock),
+        .Q          (Q),
+        .en_out     (en_to_adder),
+        .mux_sel    (mux_sel_to_adder)
+    );
     
-//    (*keep_hierarchy="yes"*) CLA_Adder_Top CLA_Adder_Top_instance(
-////    .en_top(en_32_local),
-//  	.clk_top(clock),
-////  	.mux_sel(mux_sel_32_local),
-//  	.A(data_out_A),
-//  	.B(data_out_B),
-//  	.R0(R0),
-//    .done_top(done_addition)
-//    );
+    
+    (*keep_hierarchy="yes"*) CLA_Adder_Top CLA_Adder_Top_instance(
+    .en_top(en_local[0]),
+  	.clk_top(clock),
+  	.A(data_out_A),
+  	.B(data_out_B),
+  	.R0(R0),
+    .done_top(done_addition)
+    );
  
 
-//     (*keep_hierarchy="yes"*) output_buffer output_buffer_to_R0(
-//        .clock(clock),
-//        .done_addition(done_addition),
-//  	    .R0 (R0),
-//  	    .data_out_for_R0(data_out_for_R0),
-//  	    .done(done)
-//    );
+     (*keep_hierarchy="yes"*) output_buffer output_buffer_to_R0(
+        .clock(clock),
+        .done_addition(done_addition),
+  	    .R0 (R0),
+  	    .data_out_for_R0(data_out_for_R0),
+  	    .done(done)
+    );
 
     
 endmodule

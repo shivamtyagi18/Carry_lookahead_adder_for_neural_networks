@@ -20,20 +20,23 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module mux2_1 #(parameter Word_size = 8) (
+module mux2_1 #(parameter Desired_Quantization=4) (
     din_0      , // Mux first input
     din_1      , // Mux Second input
     sel        , // Select input
-    mux_out      // Mux output
+    mux_out    ,  // Mux output
+    done_from_mux
   );
   //-----------Input Ports---------------
-  input [Word_size-1:0] din_0, din_1;
+  input [Desired_Quantization-1:0] din_0, din_1;
   input sel ;
   //-----------Output Ports---------------
-  output [Word_size-1:0] mux_out;
+  output [Desired_Quantization-1:0] mux_out;
+  output done_from_mux;
   //------------Internal Variables--------
-  wire  [Word_size-1:0] mux_out;
+  wire  [Desired_Quantization-1:0] mux_out;
   //-------------Code Start-----------------
-  assign mux_out = (sel) ? din_1 : din_0;
+  assign mux_out = (sel) ? din_1 : din_0; // carry for sel 1
+  assign done_from_mux = (sel) ? 1'b1 : 1'b0;
 
 endmodule

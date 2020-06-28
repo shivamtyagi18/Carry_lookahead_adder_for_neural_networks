@@ -20,20 +20,29 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module enable_decoder #(parameter Word_size = 8)(
+module enable_decoder #(parameter Quantization = 4)(
     input clock,
-    input en_5,
-    output reg [Word_size-1:0] en_32
+    input [1:0] Q,
+    output reg [7 :0] en_out
     );
     
      always @(posedge clock)
         begin
-            if ( en_5 == 1'b1 )
+            if ( Q == 2'b00 )
                 begin
-                    en_32 = 32'b11111111;
+                    en_out <= 8'b00000001; // only one 4-bit bsi adder block
                 end
-             else begin
-                en_32 = 32'b0;
+             else if ( Q == 2'b01 )
+                begin
+                 en_out <= 8'b00000011; // only two 4-bit bsi adder block
+                end
+             else if ( Q == 2'b10 )
+                begin
+                 en_out <= 8'b00001111; // only four 4-bit bsi adder block
+                end
+             else if ( Q == 2'b11 )
+                begin
+                 en_out <= 8'b11111111; // only eight 4-bit bsi adder block
                 end
             
         end

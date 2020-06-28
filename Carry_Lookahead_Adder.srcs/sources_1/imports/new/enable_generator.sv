@@ -20,24 +20,25 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module enable_generator #(parameter Word_size = 8, Max_Quantization = 32,  Desired_Quantization=1)(
+module enable_generator #(parameter Word_size = 8, Max_Quantization = 32,  Desired_Quantization=4)(
     input clock,
-    input en_5,
-    output [Word_size-1:0] en_32,
-    input mux_sel_5,
-    output [Word_size-1:0] mux_sel_32
+    input [1:0] Q,
+    output [7:0] en_out,
+    output [7:0] mux_sel
     );
+    
+//    assign Q = 2'b00;
     
     (*keep_hierarchy="yes"*) enable_decoder en_decoder(
     .clock(clock),
-    .en_5(en_5),
-    .en_32(en_32)
+    .Q(Q),
+    .en_out(en_out)
     );
     
     (*keep_hierarchy="yes"*) enable_decoder mux_decoder(
     .clock(clock),
-    .en_5(mux_sel_5),
-    .en_32(mux_sel_32)
+    .Q(Q),
+    .en_out(mux_sel)
     );
     
 endmodule

@@ -21,11 +21,11 @@
 
 
 module output_buffer 
-    #(parameter size_of_vectors = 32, Word_size = 8, Max_Quantization = 32, Desired_Quantization=32)(
+    #(parameter size_of_vectors = 32, Word_size = 8, Max_Quantization = 32, Desired_Quantization=4)(
   	input clock,
   	input done_addition,
   	input [Desired_Quantization:0] R0 [Word_size-1:0],
-  	output [Desired_Quantization:0] data_out_for_R0,
+  	output [Max_Quantization+Word_size-1:0] data_out_for_R0,
   	output done
     ); 
     
