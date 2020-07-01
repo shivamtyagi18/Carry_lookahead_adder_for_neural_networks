@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2.1 (lin64) Build 2729669 Thu Dec  5 04:48:12 MST 2019
-| Date         : Fri May  1 22:51:55 2020
+| Date         : Wed Jul  1 09:21:17 2020
 | Host         : ubuntu running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_control_sets -verbose -file CLA_Adder_Wrapper_level2_control_sets_placed.rpt
 | Design       : CLA_Adder_Wrapper_level2
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    20 |
-|    Minimum number of control sets                        |    20 |
+| Total control sets                                       |     6 |
+|    Minimum number of control sets                        |     6 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    18 |
+| Unused register locations in slices containing registers |    10 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    20 |
+| Total control sets |     6 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     1 |
+| >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    18 |
+| >= 16              |     5 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |            1289 |          206 |
-| No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |             557 |          270 |
+| No           | No                    | No                     |              50 |           21 |
+| No           | No                    | Yes                    |              32 |            8 |
+| No           | Yes                   | No                     |               4 |            1 |
+| Yes          | No                    | No                     |             104 |           33 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -70,29 +70,15 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------+------------------------------------------------------------------------------------------+------------------+------------------+----------------+
-|   Clock Signal   |                                       Enable Signal                                      | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+------------------+------------------------------------------------------------------------------------------+------------------+------------------+----------------+
-|  clock_IBUF_BUFG | instance_wrapper_level1/CLA_Adder_Top_instance/done_top                                  |                  |                1 |              4 |
-|  clock_IBUF_BUFG | en_5_IBUF                                                                                |                  |                2 |              8 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_A/data_out_local[7][31]_i_1_n_0    |                  |               16 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_A/data_out_local[6][31]_i_1_n_0    |                  |               15 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_A/data_out_local[5][31]_i_1_n_0    |                  |               12 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_A/data_out_local[4][31]_i_1_n_0    |                  |               15 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_A/data_out_local[3][31]_i_1_n_0    |                  |               15 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_A/data_out_local[2][31]_i_1_n_0    |                  |               10 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_A/data_out_local[0][31]_i_1_n_0    |                  |               15 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_A/data_out_local[1][31]_i_1_n_0    |                  |               18 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local[1][31]_i_1_n_0    |                  |               13 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local[7][31]_i_1_n_0    |                  |               12 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local[6][31]_i_1_n_0    |                  |               17 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local[4][31]_i_1_n_0    |                  |               18 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local[3][31]_i_1_n_0    |                  |               18 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local[2][31]_i_1_n_0    |                  |               18 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local[0][31]_i_1_n_0    |                  |               16 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out_local[5][31]_i_1_n_0    |                  |               20 |             32 |
-|  clock_IBUF_BUFG | instance_wrapper_level1/output_buffer_to_R0/output_mem_to_R0/data_out_for_R0[32]_i_1_n_0 |                  |               19 |             33 |
-|  clock_IBUF_BUFG |                                                                                          |                  |              206 |           1289 |
-+------------------+------------------------------------------------------------------------------------------+------------------+------------------+----------------+
++------------------+------------------------------------------------------------------------------------------+------------------------+------------------+----------------+
+|   Clock Signal   |                                       Enable Signal                                      |    Set/Reset Signal    | Slice Load Count | Bel Load Count |
++------------------+------------------------------------------------------------------------------------------+------------------------+------------------+----------------+
+|  clock_IBUF_BUFG |                                                                                          | Clock_Count[3]_i_1_n_0 |                1 |              4 |
+|  Clock_En_BUFG   |                                                                                          | rst_IBUF               |                8 |             32 |
+|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_A/data_out[7][3]_i_1_n_0           |                        |               12 |             32 |
+|  clock_IBUF_BUFG | instance_wrapper_level1/input_buffer_instance/bsi_mem_B/data_out[7][3]_i_1_n_0           |                        |               11 |             32 |
+|  clock_IBUF_BUFG | instance_wrapper_level1/output_buffer_to_R0/output_mem_to_R0/data_out_for_R0[39]_i_1_n_0 |                        |               10 |             40 |
+|  clock_IBUF_BUFG |                                                                                          |                        |               21 |             50 |
++------------------+------------------------------------------------------------------------------------------+------------------------+------------------+----------------+
 
 

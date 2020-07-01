@@ -1,6 +1,9 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "../../../../Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Adder_Wrapper_level2.v" \
+"../../../../Carry_Lookahead_Adder.srcs/sources_1/FPGA/adder.v" \
+"../../../../Carry_Lookahead_Adder.srcs/sources_1/imports/new/dreg.v" \
+"../../../../Carry_Lookahead_Adder.srcs/sources_1/FPGA/imem.v" \
 
 sv xil_defaultlib  \
 "../../../../Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Adder_Top.v" \

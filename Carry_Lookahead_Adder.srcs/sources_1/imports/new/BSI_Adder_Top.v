@@ -28,7 +28,7 @@ module CLA_Adder_Top #(parameter Word_size = 8, Max_Quantization = 32,  Desired_
   	input clk_top,
   	input [Desired_Quantization-1:0] A [Word_size-1:0],
   	input [Desired_Quantization-1:0] B [Word_size-1:0],
-  	inout [Desired_Quantization-1:0] C ,
+//  	inout [Desired_Quantization-1:0] C ,
   	output [Desired_Quantization:0] R0 [Word_size-1:0],
     output reg done_top
     );

@@ -15,58 +15,77 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 87747 
+INFO: Helper process launched with PID 3606 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1921.352 ; gain = 204.684 ; free physical = 2702 ; free virtual = 4350
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1921.324 ; gain = 202.715 ; free physical = 3366 ; free virtual = 5855
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'CLA_Adder_Wrapper_level2' [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Adder_Wrapper_level2.v:27]
 	Parameter size_of_vectors bound to: 16 - type: integer 
 	Parameter Word_size bound to: 8 - type: integer 
 	Parameter Max_Quantization bound to: 32 - type: integer 
 	Parameter Desired_Quantization bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dreg' [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/dreg.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dreg' (1#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/dreg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'adder' [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/FPGA/adder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (2#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/FPGA/adder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'imem' [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/FPGA/imem.v:1]
+INFO: [Synth 8-3876] $readmem data file 'memFileA.dat' is read successfully [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/FPGA/imem.v:10]
+INFO: [Synth 8-3876] $readmem data file 'memFileB.dat' is read successfully [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/FPGA/imem.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'imem' (3#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/FPGA/imem.v:1]
 INFO: [Synth 8-6157] synthesizing module 'CLA_Adder_Wrapper_level1' [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Adder_Wrapper_level1.sv:29]
 	Parameter size_of_vectors bound to: 32 - type: integer 
 	Parameter Word_size bound to: 8 - type: integer 
 	Parameter Max_Quantization bound to: 32 - type: integer 
-	Parameter Desired_Quantization bound to: 32 - type: integer 
+	Parameter Desired_Quantization bound to: 4 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'input_buffer' [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/input_buffer.sv:23]
 	Parameter size_of_vectors bound to: 32 - type: integer 
 	Parameter Word_size bound to: 8 - type: integer 
 	Parameter Max_Quantization bound to: 32 - type: integer 
-	Parameter Desired_Quantization bound to: 32 - type: integer 
+	Parameter Desired_Quantization bound to: 4 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'CLA_Memory_Module' [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Memory_Module.sv:23]
 	Parameter Word_size bound to: 8 - type: integer 
-	Parameter Quantization bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'CLA_Memory_Module' (1#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Memory_Module.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'input_buffer' (2#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/input_buffer.sv:23]
+	Parameter Max_Quantization bound to: 32 - type: integer 
+	Parameter Desired_Quantization bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'CLA_Memory_Module' (4#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Memory_Module.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'input_buffer' (5#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/input_buffer.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'enable_generator' [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/enable_generator.sv:23]
+	Parameter Word_size bound to: 8 - type: integer 
+	Parameter Max_Quantization bound to: 32 - type: integer 
+	Parameter Desired_Quantization bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'enable_decoder' [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/enable_decoder.sv:23]
+	Parameter Quantization bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'enable_decoder' (6#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/enable_decoder.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'enable_generator' (7#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/enable_generator.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'CLA_Adder_Top' [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Adder_Top.v:26]
 	Parameter Word_size bound to: 8 - type: integer 
 	Parameter Max_Quantization bound to: 32 - type: integer 
-	Parameter Desired_Quantization bound to: 1 - type: integer 
+	Parameter Desired_Quantization bound to: 4 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'carry_lookahead_adder' [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/new/carry_lookahead_adder.v:23]
-	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter WIDTH bound to: 4 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'full_adder' [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/new/full_adder.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'full_adder' (3#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/new/full_adder.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'carry_lookahead_adder' (4#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/new/carry_lookahead_adder.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'CLA_Adder_Top' (5#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Adder_Top.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'full_adder' (8#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/new/full_adder.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'carry_lookahead_adder' (9#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/new/carry_lookahead_adder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'CLA_Adder_Top' (10#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Adder_Top.v:26]
 INFO: [Synth 8-6157] synthesizing module 'output_buffer' [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/output_buffer.sv:23]
 	Parameter size_of_vectors bound to: 32 - type: integer 
 	Parameter Word_size bound to: 8 - type: integer 
 	Parameter Max_Quantization bound to: 32 - type: integer 
-	Parameter Desired_Quantization bound to: 32 - type: integer 
+	Parameter Desired_Quantization bound to: 4 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'bsi_mem_output_side' [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/bsi_mem_output_side.sv:23]
 	Parameter Word_size bound to: 8 - type: integer 
-	Parameter Quantization bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'bsi_mem_output_side' (6#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/bsi_mem_output_side.sv:23]
+	Parameter Quantization bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bsi_mem_output_side' (11#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/bsi_mem_output_side.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'output_mem_to_R0' [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/output_mem_to_R0.sv:23]
 	Parameter Word_size bound to: 8 - type: integer 
-	Parameter Desired_Quantization bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'output_mem_to_R0' (7#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/output_mem_to_R0.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'output_buffer' (8#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/output_buffer.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'CLA_Adder_Wrapper_level1' (9#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Adder_Wrapper_level1.sv:29]
-INFO: [Synth 8-6155] done synthesizing module 'CLA_Adder_Wrapper_level2' (10#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Adder_Wrapper_level2.v:27]
+	Parameter Max_Quantization bound to: 32 - type: integer 
+	Parameter Desired_Quantization bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'output_mem_to_R0' (12#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/output_mem_to_R0.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'output_buffer' (13#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/output_buffer.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'CLA_Adder_Wrapper_level1' (14#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Adder_Wrapper_level1.sv:29]
+INFO: [Synth 8-6155] done synthesizing module 'CLA_Adder_Wrapper_level2' (15#1) [/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sources_1/imports/new/BSI_Adder_Wrapper_level2.v:27]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1982.102 ; gain = 265.434 ; free physical = 2728 ; free virtual = 4377
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1983.074 ; gain = 264.465 ; free physical = 3385 ; free virtual = 5876
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -79,12 +98,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1985.070 ; gain = 268.402 ; free physical = 2727 ; free virtual = 4376
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1997.918 ; gain = 279.309 ; free physical = 3383 ; free virtual = 5875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1985.070 ; gain = 268.402 ; free physical = 2727 ; free virtual = 4376
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1997.918 ; gain = 279.309 ; free physical = 3383 ; free virtual = 5875
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1985.070 ; gain = 0.000 ; free physical = 2720 ; free virtual = 4369
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1997.918 ; gain = 0.000 ; free physical = 3374 ; free virtual = 5866
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -95,29 +114,29 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/CLA_Adder_Wrapper_level2_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2139.812 ; gain = 0.000 ; free physical = 2630 ; free virtual = 4279
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2150.660 ; gain = 0.000 ; free physical = 3256 ; free virtual = 5763
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2139.812 ; gain = 0.000 ; free physical = 2630 ; free virtual = 4279
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2150.660 ; gain = 0.000 ; free physical = 3256 ; free virtual = 5763
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2702 ; free virtual = 4351
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3336 ; free virtual = 5843
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2702 ; free virtual = 4351
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3336 ; free virtual = 5843
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2702 ; free virtual = 4351
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3336 ; free virtual = 5843
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2692 ; free virtual = 4342
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3338 ; free virtual = 5847
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -130,18 +149,27 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      4 Bit       Adders := 3     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 2     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 512   
+	   2 Input      1 Bit         XORs := 64    
 +---Registers : 
-	               33 Bit    Registers := 9     
-	               32 Bit    Registers := 48    
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 14    
+	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 8     
+	                4 Bit    Registers := 17    
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 12    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 32    
-	   2 Input      6 Bit        Muxes := 9     
-	   2 Input      1 Bit        Muxes := 19    
+	   4 Input      8 Bit        Muxes := 2     
+	   5 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
+	  64 Input      4 Bit        Muxes := 18    
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -149,18 +177,44 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module CLA_Memory_Module 
+Module CLA_Adder_Wrapper_level2 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 16    
-	                6 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 16    
-	   2 Input      6 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 9     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module dreg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module CLA_Memory_Module 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 8     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	  64 Input      4 Bit        Muxes := 9     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module enable_decoder 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
 Module full_adder 
 Detailed RTL Component Info : 
 +---XORs : 
@@ -168,24 +222,19 @@ Detailed RTL Component Info :
 Module carry_lookahead_adder 
 Detailed RTL Component Info : 
 +---Registers : 
-	               33 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-Module CLA_Adder_Top 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 16    
+	                5 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 Module output_mem_to_R0 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
-	               33 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
 	                6 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      6 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -202,12 +251,37 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (CLA_Memory_Module:/done_mem_local_reg)
+INFO: [Synth 8-5546] ROM "p_2_out0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "p_0_out" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_0_out" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (CLA_Memory_Module:/done_mem_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (enable_decoder:/\en_out_reg[0] )
+INFO: [Synth 8-3886] merging instance 'enable_decoder:/en_out_reg[2]' (FDRE) to 'enable_decoder:/en_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'enable_decoder:/en_out_reg[4]' (FDRE) to 'enable_decoder:/en_out_reg[5]'
+INFO: [Synth 8-3886] merging instance 'enable_decoder:/en_out_reg[5]' (FDRE) to 'enable_decoder:/en_out_reg[6]'
+INFO: [Synth 8-3886] merging instance 'enable_decoder:/en_out_reg[6]' (FDRE) to 'enable_decoder:/en_out_reg[7]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (carry_lookahead_adder:/done_reg)
+INFO: [Synth 8-3886] merging instance 'instance_wrapper_level1/output_buffer_to_R0/output_mem_to_R0/count_output_buffer_reg[4]' (FDE) to 'instance_wrapper_level1/output_buffer_to_R0/output_mem_to_R0/count_output_buffer_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (instance_wrapper_level1/output_buffer_to_R0/output_mem_to_R0/\count_output_buffer_reg[5] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (instance_wrapper_level1/output_buffer_to_R0/output_mem_to_R0/done_reg)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2674 ; free virtual = 4327
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3324 ; free virtual = 5837
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|imem        | p_0_out    | 64x21         | LUT            | 
+|imem        | p_0_out    | 64x21         | LUT            | 
+|imem        | p_0_out    | 64x21         | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -219,13 +293,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2553 ; free virtual = 4206
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3196 ; free virtual = 5717
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2548 ; free virtual = 4201
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3196 ; free virtual = 5717
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -237,7 +311,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2545 ; free virtual = 4198
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3193 ; free virtual = 5714
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -261,13 +335,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2544 ; free virtual = 4198
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3193 ; free virtual = 5714
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2544 ; free virtual = 4198
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3193 ; free virtual = 5714
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -286,25 +360,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2544 ; free virtual = 4198
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3193 ; free virtual = 5714
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2544 ; free virtual = 4198
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3193 ; free virtual = 5714
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2544 ; free virtual = 4198
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3193 ; free virtual = 5714
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2544 ; free virtual = 4198
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3193 ; free virtual = 5714
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -317,322 +391,105 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+------+------+
-|      |Cell  |Count |
-+------+------+------+
-|1     |BUFG  |     1|
-|2     |LUT2  |    12|
-|3     |LUT3  |   635|
-|4     |LUT4  |    15|
-|5     |LUT5  |   129|
-|6     |LUT6  |    74|
-|7     |MUXF7 |    33|
-|8     |FDRE  |  1846|
-|9     |IBUF  |    66|
-|10    |OBUF  |    34|
-+------+------+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     1|
+|4     |LUT2   |    51|
+|5     |LUT3   |    74|
+|6     |LUT4   |    12|
+|7     |LUT6   |    49|
+|8     |FDCE   |    32|
+|9     |FDRE   |   158|
+|10    |IBUF   |     5|
+|11    |OBUF   |    41|
++------+-------+------+
 
 Report Instance Areas: 
-+------+--------------------------------------+-------------------------+------+
-|      |Instance                              |Module                   |Cells |
-+------+--------------------------------------+-------------------------+------+
-|1     |top                                   |                         |  2845|
-|2     |  instance_wrapper_level1             |CLA_Adder_Wrapper_level1 |  2744|
-|3     |    input_buffer_instance             |input_buffer             |  1056|
-|4     |      bsi_mem_A                       |CLA_Memory_Module__1     |   528|
-|5     |      bsi_mem_B                       |CLA_Memory_Module        |   528|
-|6     |    CLA_Adder_Top_instance            |CLA_Adder_Top            |  1547|
-|7     |      \adder[0].inst_2                |carry_lookahead_adder__1 |   129|
-|8     |        \genblk1[0].full_adder_inst   |full_adder__63           |     2|
-|9     |        \genblk1[1].full_adder_inst   |full_adder__62           |     2|
-|10    |        \genblk1[2].full_adder_inst   |full_adder__61           |     2|
-|11    |        \genblk1[3].full_adder_inst   |full_adder__60           |     2|
-|12    |        \genblk1[4].full_adder_inst   |full_adder__59           |     2|
-|13    |        \genblk1[5].full_adder_inst   |full_adder__58           |     2|
-|14    |        \genblk1[6].full_adder_inst   |full_adder__57           |     2|
-|15    |        \genblk1[7].full_adder_inst   |full_adder__56           |     2|
-|16    |        \genblk1[8].full_adder_inst   |full_adder__55           |     2|
-|17    |        \genblk1[9].full_adder_inst   |full_adder__54           |     2|
-|18    |        \genblk1[10].full_adder_inst  |full_adder__53           |     2|
-|19    |        \genblk1[11].full_adder_inst  |full_adder__52           |     2|
-|20    |        \genblk1[12].full_adder_inst  |full_adder__51           |     2|
-|21    |        \genblk1[13].full_adder_inst  |full_adder__50           |     2|
-|22    |        \genblk1[14].full_adder_inst  |full_adder__49           |     2|
-|23    |        \genblk1[15].full_adder_inst  |full_adder__48           |     2|
-|24    |        \genblk1[16].full_adder_inst  |full_adder__47           |     2|
-|25    |        \genblk1[17].full_adder_inst  |full_adder__46           |     2|
-|26    |        \genblk1[18].full_adder_inst  |full_adder__45           |     2|
-|27    |        \genblk1[19].full_adder_inst  |full_adder__44           |     2|
-|28    |        \genblk1[20].full_adder_inst  |full_adder__43           |     2|
-|29    |        \genblk1[21].full_adder_inst  |full_adder__42           |     2|
-|30    |        \genblk1[22].full_adder_inst  |full_adder__41           |     2|
-|31    |        \genblk1[23].full_adder_inst  |full_adder__40           |     2|
-|32    |        \genblk1[24].full_adder_inst  |full_adder__39           |     2|
-|33    |        \genblk1[25].full_adder_inst  |full_adder__38           |     2|
-|34    |        \genblk1[26].full_adder_inst  |full_adder__37           |     2|
-|35    |        \genblk1[27].full_adder_inst  |full_adder__36           |     2|
-|36    |        \genblk1[28].full_adder_inst  |full_adder__35           |     2|
-|37    |        \genblk1[29].full_adder_inst  |full_adder__34           |     2|
-|38    |        \genblk1[30].full_adder_inst  |full_adder__33           |     2|
-|39    |        \genblk1[31].full_adder_inst  |full_adder__32           |     2|
-|40    |      \adder[1].inst_2                |carry_lookahead_adder__2 |   129|
-|41    |        \genblk1[0].full_adder_inst   |full_adder__95           |     2|
-|42    |        \genblk1[1].full_adder_inst   |full_adder__94           |     2|
-|43    |        \genblk1[2].full_adder_inst   |full_adder__93           |     2|
-|44    |        \genblk1[3].full_adder_inst   |full_adder__92           |     2|
-|45    |        \genblk1[4].full_adder_inst   |full_adder__91           |     2|
-|46    |        \genblk1[5].full_adder_inst   |full_adder__90           |     2|
-|47    |        \genblk1[6].full_adder_inst   |full_adder__89           |     2|
-|48    |        \genblk1[7].full_adder_inst   |full_adder__88           |     2|
-|49    |        \genblk1[8].full_adder_inst   |full_adder__87           |     2|
-|50    |        \genblk1[9].full_adder_inst   |full_adder__86           |     2|
-|51    |        \genblk1[10].full_adder_inst  |full_adder__85           |     2|
-|52    |        \genblk1[11].full_adder_inst  |full_adder__84           |     2|
-|53    |        \genblk1[12].full_adder_inst  |full_adder__83           |     2|
-|54    |        \genblk1[13].full_adder_inst  |full_adder__82           |     2|
-|55    |        \genblk1[14].full_adder_inst  |full_adder__81           |     2|
-|56    |        \genblk1[15].full_adder_inst  |full_adder__80           |     2|
-|57    |        \genblk1[16].full_adder_inst  |full_adder__79           |     2|
-|58    |        \genblk1[17].full_adder_inst  |full_adder__78           |     2|
-|59    |        \genblk1[18].full_adder_inst  |full_adder__77           |     2|
-|60    |        \genblk1[19].full_adder_inst  |full_adder__76           |     2|
-|61    |        \genblk1[20].full_adder_inst  |full_adder__75           |     2|
-|62    |        \genblk1[21].full_adder_inst  |full_adder__74           |     2|
-|63    |        \genblk1[22].full_adder_inst  |full_adder__73           |     2|
-|64    |        \genblk1[23].full_adder_inst  |full_adder__72           |     2|
-|65    |        \genblk1[24].full_adder_inst  |full_adder__71           |     2|
-|66    |        \genblk1[25].full_adder_inst  |full_adder__70           |     2|
-|67    |        \genblk1[26].full_adder_inst  |full_adder__69           |     2|
-|68    |        \genblk1[27].full_adder_inst  |full_adder__68           |     2|
-|69    |        \genblk1[28].full_adder_inst  |full_adder__67           |     2|
-|70    |        \genblk1[29].full_adder_inst  |full_adder__66           |     2|
-|71    |        \genblk1[30].full_adder_inst  |full_adder__65           |     2|
-|72    |        \genblk1[31].full_adder_inst  |full_adder__64           |     2|
-|73    |      \adder[2].inst_2                |carry_lookahead_adder__3 |   129|
-|74    |        \genblk1[0].full_adder_inst   |full_adder__127          |     2|
-|75    |        \genblk1[1].full_adder_inst   |full_adder__126          |     2|
-|76    |        \genblk1[2].full_adder_inst   |full_adder__125          |     2|
-|77    |        \genblk1[3].full_adder_inst   |full_adder__124          |     2|
-|78    |        \genblk1[4].full_adder_inst   |full_adder__123          |     2|
-|79    |        \genblk1[5].full_adder_inst   |full_adder__122          |     2|
-|80    |        \genblk1[6].full_adder_inst   |full_adder__121          |     2|
-|81    |        \genblk1[7].full_adder_inst   |full_adder__120          |     2|
-|82    |        \genblk1[8].full_adder_inst   |full_adder__119          |     2|
-|83    |        \genblk1[9].full_adder_inst   |full_adder__118          |     2|
-|84    |        \genblk1[10].full_adder_inst  |full_adder__117          |     2|
-|85    |        \genblk1[11].full_adder_inst  |full_adder__116          |     2|
-|86    |        \genblk1[12].full_adder_inst  |full_adder__115          |     2|
-|87    |        \genblk1[13].full_adder_inst  |full_adder__114          |     2|
-|88    |        \genblk1[14].full_adder_inst  |full_adder__113          |     2|
-|89    |        \genblk1[15].full_adder_inst  |full_adder__112          |     2|
-|90    |        \genblk1[16].full_adder_inst  |full_adder__111          |     2|
-|91    |        \genblk1[17].full_adder_inst  |full_adder__110          |     2|
-|92    |        \genblk1[18].full_adder_inst  |full_adder__109          |     2|
-|93    |        \genblk1[19].full_adder_inst  |full_adder__108          |     2|
-|94    |        \genblk1[20].full_adder_inst  |full_adder__107          |     2|
-|95    |        \genblk1[21].full_adder_inst  |full_adder__106          |     2|
-|96    |        \genblk1[22].full_adder_inst  |full_adder__105          |     2|
-|97    |        \genblk1[23].full_adder_inst  |full_adder__104          |     2|
-|98    |        \genblk1[24].full_adder_inst  |full_adder__103          |     2|
-|99    |        \genblk1[25].full_adder_inst  |full_adder__102          |     2|
-|100   |        \genblk1[26].full_adder_inst  |full_adder__101          |     2|
-|101   |        \genblk1[27].full_adder_inst  |full_adder__100          |     2|
-|102   |        \genblk1[28].full_adder_inst  |full_adder__99           |     2|
-|103   |        \genblk1[29].full_adder_inst  |full_adder__98           |     2|
-|104   |        \genblk1[30].full_adder_inst  |full_adder__97           |     2|
-|105   |        \genblk1[31].full_adder_inst  |full_adder__96           |     2|
-|106   |      \adder[3].inst_2                |carry_lookahead_adder__4 |   129|
-|107   |        \genblk1[0].full_adder_inst   |full_adder__159          |     2|
-|108   |        \genblk1[1].full_adder_inst   |full_adder__158          |     2|
-|109   |        \genblk1[2].full_adder_inst   |full_adder__157          |     2|
-|110   |        \genblk1[3].full_adder_inst   |full_adder__156          |     2|
-|111   |        \genblk1[4].full_adder_inst   |full_adder__155          |     2|
-|112   |        \genblk1[5].full_adder_inst   |full_adder__154          |     2|
-|113   |        \genblk1[6].full_adder_inst   |full_adder__153          |     2|
-|114   |        \genblk1[7].full_adder_inst   |full_adder__152          |     2|
-|115   |        \genblk1[8].full_adder_inst   |full_adder__151          |     2|
-|116   |        \genblk1[9].full_adder_inst   |full_adder__150          |     2|
-|117   |        \genblk1[10].full_adder_inst  |full_adder__149          |     2|
-|118   |        \genblk1[11].full_adder_inst  |full_adder__148          |     2|
-|119   |        \genblk1[12].full_adder_inst  |full_adder__147          |     2|
-|120   |        \genblk1[13].full_adder_inst  |full_adder__146          |     2|
-|121   |        \genblk1[14].full_adder_inst  |full_adder__145          |     2|
-|122   |        \genblk1[15].full_adder_inst  |full_adder__144          |     2|
-|123   |        \genblk1[16].full_adder_inst  |full_adder__143          |     2|
-|124   |        \genblk1[17].full_adder_inst  |full_adder__142          |     2|
-|125   |        \genblk1[18].full_adder_inst  |full_adder__141          |     2|
-|126   |        \genblk1[19].full_adder_inst  |full_adder__140          |     2|
-|127   |        \genblk1[20].full_adder_inst  |full_adder__139          |     2|
-|128   |        \genblk1[21].full_adder_inst  |full_adder__138          |     2|
-|129   |        \genblk1[22].full_adder_inst  |full_adder__137          |     2|
-|130   |        \genblk1[23].full_adder_inst  |full_adder__136          |     2|
-|131   |        \genblk1[24].full_adder_inst  |full_adder__135          |     2|
-|132   |        \genblk1[25].full_adder_inst  |full_adder__134          |     2|
-|133   |        \genblk1[26].full_adder_inst  |full_adder__133          |     2|
-|134   |        \genblk1[27].full_adder_inst  |full_adder__132          |     2|
-|135   |        \genblk1[28].full_adder_inst  |full_adder__131          |     2|
-|136   |        \genblk1[29].full_adder_inst  |full_adder__130          |     2|
-|137   |        \genblk1[30].full_adder_inst  |full_adder__129          |     2|
-|138   |        \genblk1[31].full_adder_inst  |full_adder__128          |     2|
-|139   |      \adder[4].inst_2                |carry_lookahead_adder__5 |   129|
-|140   |        \genblk1[0].full_adder_inst   |full_adder__191          |     2|
-|141   |        \genblk1[1].full_adder_inst   |full_adder__190          |     2|
-|142   |        \genblk1[2].full_adder_inst   |full_adder__189          |     2|
-|143   |        \genblk1[3].full_adder_inst   |full_adder__188          |     2|
-|144   |        \genblk1[4].full_adder_inst   |full_adder__187          |     2|
-|145   |        \genblk1[5].full_adder_inst   |full_adder__186          |     2|
-|146   |        \genblk1[6].full_adder_inst   |full_adder__185          |     2|
-|147   |        \genblk1[7].full_adder_inst   |full_adder__184          |     2|
-|148   |        \genblk1[8].full_adder_inst   |full_adder__183          |     2|
-|149   |        \genblk1[9].full_adder_inst   |full_adder__182          |     2|
-|150   |        \genblk1[10].full_adder_inst  |full_adder__181          |     2|
-|151   |        \genblk1[11].full_adder_inst  |full_adder__180          |     2|
-|152   |        \genblk1[12].full_adder_inst  |full_adder__179          |     2|
-|153   |        \genblk1[13].full_adder_inst  |full_adder__178          |     2|
-|154   |        \genblk1[14].full_adder_inst  |full_adder__177          |     2|
-|155   |        \genblk1[15].full_adder_inst  |full_adder__176          |     2|
-|156   |        \genblk1[16].full_adder_inst  |full_adder__175          |     2|
-|157   |        \genblk1[17].full_adder_inst  |full_adder__174          |     2|
-|158   |        \genblk1[18].full_adder_inst  |full_adder__173          |     2|
-|159   |        \genblk1[19].full_adder_inst  |full_adder__172          |     2|
-|160   |        \genblk1[20].full_adder_inst  |full_adder__171          |     2|
-|161   |        \genblk1[21].full_adder_inst  |full_adder__170          |     2|
-|162   |        \genblk1[22].full_adder_inst  |full_adder__169          |     2|
-|163   |        \genblk1[23].full_adder_inst  |full_adder__168          |     2|
-|164   |        \genblk1[24].full_adder_inst  |full_adder__167          |     2|
-|165   |        \genblk1[25].full_adder_inst  |full_adder__166          |     2|
-|166   |        \genblk1[26].full_adder_inst  |full_adder__165          |     2|
-|167   |        \genblk1[27].full_adder_inst  |full_adder__164          |     2|
-|168   |        \genblk1[28].full_adder_inst  |full_adder__163          |     2|
-|169   |        \genblk1[29].full_adder_inst  |full_adder__162          |     2|
-|170   |        \genblk1[30].full_adder_inst  |full_adder__161          |     2|
-|171   |        \genblk1[31].full_adder_inst  |full_adder__160          |     2|
-|172   |      \adder[5].inst_2                |carry_lookahead_adder__6 |   129|
-|173   |        \genblk1[0].full_adder_inst   |full_adder__223          |     2|
-|174   |        \genblk1[1].full_adder_inst   |full_adder__222          |     2|
-|175   |        \genblk1[2].full_adder_inst   |full_adder__221          |     2|
-|176   |        \genblk1[3].full_adder_inst   |full_adder__220          |     2|
-|177   |        \genblk1[4].full_adder_inst   |full_adder__219          |     2|
-|178   |        \genblk1[5].full_adder_inst   |full_adder__218          |     2|
-|179   |        \genblk1[6].full_adder_inst   |full_adder__217          |     2|
-|180   |        \genblk1[7].full_adder_inst   |full_adder__216          |     2|
-|181   |        \genblk1[8].full_adder_inst   |full_adder__215          |     2|
-|182   |        \genblk1[9].full_adder_inst   |full_adder__214          |     2|
-|183   |        \genblk1[10].full_adder_inst  |full_adder__213          |     2|
-|184   |        \genblk1[11].full_adder_inst  |full_adder__212          |     2|
-|185   |        \genblk1[12].full_adder_inst  |full_adder__211          |     2|
-|186   |        \genblk1[13].full_adder_inst  |full_adder__210          |     2|
-|187   |        \genblk1[14].full_adder_inst  |full_adder__209          |     2|
-|188   |        \genblk1[15].full_adder_inst  |full_adder__208          |     2|
-|189   |        \genblk1[16].full_adder_inst  |full_adder__207          |     2|
-|190   |        \genblk1[17].full_adder_inst  |full_adder__206          |     2|
-|191   |        \genblk1[18].full_adder_inst  |full_adder__205          |     2|
-|192   |        \genblk1[19].full_adder_inst  |full_adder__204          |     2|
-|193   |        \genblk1[20].full_adder_inst  |full_adder__203          |     2|
-|194   |        \genblk1[21].full_adder_inst  |full_adder__202          |     2|
-|195   |        \genblk1[22].full_adder_inst  |full_adder__201          |     2|
-|196   |        \genblk1[23].full_adder_inst  |full_adder__200          |     2|
-|197   |        \genblk1[24].full_adder_inst  |full_adder__199          |     2|
-|198   |        \genblk1[25].full_adder_inst  |full_adder__198          |     2|
-|199   |        \genblk1[26].full_adder_inst  |full_adder__197          |     2|
-|200   |        \genblk1[27].full_adder_inst  |full_adder__196          |     2|
-|201   |        \genblk1[28].full_adder_inst  |full_adder__195          |     2|
-|202   |        \genblk1[29].full_adder_inst  |full_adder__194          |     2|
-|203   |        \genblk1[30].full_adder_inst  |full_adder__193          |     2|
-|204   |        \genblk1[31].full_adder_inst  |full_adder__192          |     2|
-|205   |      \adder[6].inst_2                |carry_lookahead_adder__7 |   129|
-|206   |        \genblk1[0].full_adder_inst   |full_adder__255          |     2|
-|207   |        \genblk1[1].full_adder_inst   |full_adder__254          |     2|
-|208   |        \genblk1[2].full_adder_inst   |full_adder__253          |     2|
-|209   |        \genblk1[3].full_adder_inst   |full_adder__252          |     2|
-|210   |        \genblk1[4].full_adder_inst   |full_adder__251          |     2|
-|211   |        \genblk1[5].full_adder_inst   |full_adder__250          |     2|
-|212   |        \genblk1[6].full_adder_inst   |full_adder__249          |     2|
-|213   |        \genblk1[7].full_adder_inst   |full_adder__248          |     2|
-|214   |        \genblk1[8].full_adder_inst   |full_adder__247          |     2|
-|215   |        \genblk1[9].full_adder_inst   |full_adder__246          |     2|
-|216   |        \genblk1[10].full_adder_inst  |full_adder__245          |     2|
-|217   |        \genblk1[11].full_adder_inst  |full_adder__244          |     2|
-|218   |        \genblk1[12].full_adder_inst  |full_adder__243          |     2|
-|219   |        \genblk1[13].full_adder_inst  |full_adder__242          |     2|
-|220   |        \genblk1[14].full_adder_inst  |full_adder__241          |     2|
-|221   |        \genblk1[15].full_adder_inst  |full_adder__240          |     2|
-|222   |        \genblk1[16].full_adder_inst  |full_adder__239          |     2|
-|223   |        \genblk1[17].full_adder_inst  |full_adder__238          |     2|
-|224   |        \genblk1[18].full_adder_inst  |full_adder__237          |     2|
-|225   |        \genblk1[19].full_adder_inst  |full_adder__236          |     2|
-|226   |        \genblk1[20].full_adder_inst  |full_adder__235          |     2|
-|227   |        \genblk1[21].full_adder_inst  |full_adder__234          |     2|
-|228   |        \genblk1[22].full_adder_inst  |full_adder__233          |     2|
-|229   |        \genblk1[23].full_adder_inst  |full_adder__232          |     2|
-|230   |        \genblk1[24].full_adder_inst  |full_adder__231          |     2|
-|231   |        \genblk1[25].full_adder_inst  |full_adder__230          |     2|
-|232   |        \genblk1[26].full_adder_inst  |full_adder__229          |     2|
-|233   |        \genblk1[27].full_adder_inst  |full_adder__228          |     2|
-|234   |        \genblk1[28].full_adder_inst  |full_adder__227          |     2|
-|235   |        \genblk1[29].full_adder_inst  |full_adder__226          |     2|
-|236   |        \genblk1[30].full_adder_inst  |full_adder__225          |     2|
-|237   |        \genblk1[31].full_adder_inst  |full_adder__224          |     2|
-|238   |      \adder[7].inst_2                |carry_lookahead_adder    |   129|
-|239   |        \genblk1[0].full_adder_inst   |full_adder__1            |     2|
-|240   |        \genblk1[1].full_adder_inst   |full_adder__2            |     2|
-|241   |        \genblk1[2].full_adder_inst   |full_adder__3            |     2|
-|242   |        \genblk1[3].full_adder_inst   |full_adder__4            |     2|
-|243   |        \genblk1[4].full_adder_inst   |full_adder__5            |     2|
-|244   |        \genblk1[5].full_adder_inst   |full_adder__6            |     2|
-|245   |        \genblk1[6].full_adder_inst   |full_adder__7            |     2|
-|246   |        \genblk1[7].full_adder_inst   |full_adder__8            |     2|
-|247   |        \genblk1[8].full_adder_inst   |full_adder__9            |     2|
-|248   |        \genblk1[9].full_adder_inst   |full_adder__10           |     2|
-|249   |        \genblk1[10].full_adder_inst  |full_adder__11           |     2|
-|250   |        \genblk1[11].full_adder_inst  |full_adder__12           |     2|
-|251   |        \genblk1[12].full_adder_inst  |full_adder__13           |     2|
-|252   |        \genblk1[13].full_adder_inst  |full_adder__14           |     2|
-|253   |        \genblk1[14].full_adder_inst  |full_adder__15           |     2|
-|254   |        \genblk1[15].full_adder_inst  |full_adder__16           |     2|
-|255   |        \genblk1[16].full_adder_inst  |full_adder__17           |     2|
-|256   |        \genblk1[17].full_adder_inst  |full_adder__18           |     2|
-|257   |        \genblk1[18].full_adder_inst  |full_adder__19           |     2|
-|258   |        \genblk1[19].full_adder_inst  |full_adder__20           |     2|
-|259   |        \genblk1[20].full_adder_inst  |full_adder__21           |     2|
-|260   |        \genblk1[21].full_adder_inst  |full_adder__22           |     2|
-|261   |        \genblk1[22].full_adder_inst  |full_adder__23           |     2|
-|262   |        \genblk1[23].full_adder_inst  |full_adder__24           |     2|
-|263   |        \genblk1[24].full_adder_inst  |full_adder__25           |     2|
-|264   |        \genblk1[25].full_adder_inst  |full_adder__26           |     2|
-|265   |        \genblk1[26].full_adder_inst  |full_adder__27           |     2|
-|266   |        \genblk1[27].full_adder_inst  |full_adder__28           |     2|
-|267   |        \genblk1[28].full_adder_inst  |full_adder__29           |     2|
-|268   |        \genblk1[29].full_adder_inst  |full_adder__30           |     2|
-|269   |        \genblk1[30].full_adder_inst  |full_adder__31           |     2|
-|270   |        \genblk1[31].full_adder_inst  |full_adder               |     2|
-|271   |    output_buffer_to_R0               |output_buffer            |   141|
-|272   |      bsi_mem_output_side             |bsi_mem_output_side      |     0|
-|273   |      output_mem_to_R0                |output_mem_to_R0         |   141|
-+------+--------------------------------------+-------------------------+------+
++------+-------------------------------------+-------------------------+------+
+|      |Instance                             |Module                   |Cells |
++------+-------------------------------------+-------------------------+------+
+|1     |top                                  |                         |   432|
+|2     |  pc_reg                             |dreg                     |    32|
+|3     |  pc_plus_4                          |adder                    |    40|
+|4     |  imem                               |imem                     |    40|
+|5     |  instance_wrapper_level1            |CLA_Adder_Wrapper_level1 |   262|
+|6     |    input_buffer_instance            |input_buffer             |    70|
+|7     |      bsi_mem_A                      |CLA_Memory_Module__1     |    35|
+|8     |      bsi_mem_B                      |CLA_Memory_Module        |    35|
+|9     |    en_generator_inst                |enable_generator         |    10|
+|10    |      en_decoder                     |enable_decoder__1        |     5|
+|11    |      mux_decoder                    |enable_decoder           |     5|
+|12    |    CLA_Adder_Top_instance           |CLA_Adder_Top            |   138|
+|13    |      \adder[0].adder                |carry_lookahead_adder__1 |    17|
+|14    |        \genblk1[0].full_adder_inst  |full_adder__7            |     2|
+|15    |        \genblk1[1].full_adder_inst  |full_adder__6            |     2|
+|16    |        \genblk1[2].full_adder_inst  |full_adder__5            |     2|
+|17    |        \genblk1[3].full_adder_inst  |full_adder__4            |     2|
+|18    |      \adder[1].adder                |carry_lookahead_adder__2 |    17|
+|19    |        \genblk1[0].full_adder_inst  |full_adder__11           |     2|
+|20    |        \genblk1[1].full_adder_inst  |full_adder__10           |     2|
+|21    |        \genblk1[2].full_adder_inst  |full_adder__9            |     2|
+|22    |        \genblk1[3].full_adder_inst  |full_adder__8            |     2|
+|23    |      \adder[2].adder                |carry_lookahead_adder__3 |    17|
+|24    |        \genblk1[0].full_adder_inst  |full_adder__15           |     2|
+|25    |        \genblk1[1].full_adder_inst  |full_adder__14           |     2|
+|26    |        \genblk1[2].full_adder_inst  |full_adder__13           |     2|
+|27    |        \genblk1[3].full_adder_inst  |full_adder__12           |     2|
+|28    |      \adder[3].adder                |carry_lookahead_adder__4 |    17|
+|29    |        \genblk1[0].full_adder_inst  |full_adder__19           |     2|
+|30    |        \genblk1[1].full_adder_inst  |full_adder__18           |     2|
+|31    |        \genblk1[2].full_adder_inst  |full_adder__17           |     2|
+|32    |        \genblk1[3].full_adder_inst  |full_adder__16           |     2|
+|33    |      \adder[4].adder                |carry_lookahead_adder__5 |    17|
+|34    |        \genblk1[0].full_adder_inst  |full_adder__23           |     2|
+|35    |        \genblk1[1].full_adder_inst  |full_adder__22           |     2|
+|36    |        \genblk1[2].full_adder_inst  |full_adder__21           |     2|
+|37    |        \genblk1[3].full_adder_inst  |full_adder__20           |     2|
+|38    |      \adder[5].adder                |carry_lookahead_adder__6 |    17|
+|39    |        \genblk1[0].full_adder_inst  |full_adder__27           |     2|
+|40    |        \genblk1[1].full_adder_inst  |full_adder__26           |     2|
+|41    |        \genblk1[2].full_adder_inst  |full_adder__25           |     2|
+|42    |        \genblk1[3].full_adder_inst  |full_adder__24           |     2|
+|43    |      \adder[6].adder                |carry_lookahead_adder__7 |    17|
+|44    |        \genblk1[0].full_adder_inst  |full_adder__31           |     2|
+|45    |        \genblk1[1].full_adder_inst  |full_adder__30           |     2|
+|46    |        \genblk1[2].full_adder_inst  |full_adder__29           |     2|
+|47    |        \genblk1[3].full_adder_inst  |full_adder__28           |     2|
+|48    |      \adder[7].adder                |carry_lookahead_adder    |    17|
+|49    |        \genblk1[0].full_adder_inst  |full_adder__1            |     2|
+|50    |        \genblk1[1].full_adder_inst  |full_adder__2            |     2|
+|51    |        \genblk1[2].full_adder_inst  |full_adder__3            |     2|
+|52    |        \genblk1[3].full_adder_inst  |full_adder               |     2|
+|53    |    output_buffer_to_R0              |output_buffer            |    43|
+|54    |      bsi_mem_output_side            |bsi_mem_output_side      |     0|
+|55    |      output_mem_to_R0               |output_mem_to_R0         |    43|
++------+-------------------------------------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2544 ; free virtual = 4198
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3193 ; free virtual = 5714
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 2139.812 ; gain = 268.402 ; free physical = 2602 ; free virtual = 4255
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 2139.812 ; gain = 423.145 ; free physical = 2602 ; free virtual = 4255
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 2150.660 ; gain = 279.309 ; free physical = 3245 ; free virtual = 5766
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 2150.660 ; gain = 432.051 ; free physical = 3245 ; free virtual = 5766
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2139.812 ; gain = 0.000 ; free physical = 2668 ; free virtual = 4321
-INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2150.660 ; gain = 0.000 ; free physical = 3311 ; free virtual = 5834
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2139.812 ; gain = 0.000 ; free physical = 2615 ; free virtual = 4269
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2150.660 ; gain = 0.000 ; free physical = 3258 ; free virtual = 5783
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-36 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+57 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 2139.812 ; gain = 665.188 ; free physical = 2750 ; free virtual = 4403
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2139.812 ; gain = 0.000 ; free physical = 2750 ; free virtual = 4403
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 2150.660 ; gain = 676.031 ; free physical = 3391 ; free virtual = 5916
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2150.660 ; gain = 0.000 ; free physical = 3391 ; free virtual = 5916
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.runs/synth_1/CLA_Adder_Wrapper_level2.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CLA_Adder_Wrapper_level2_utilization_synth.rpt -pb CLA_Adder_Wrapper_level2_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 30 22:23:31 2020...
+INFO: [Common 17-206] Exiting Vivado at Wed Jul  1 09:20:32 2020...

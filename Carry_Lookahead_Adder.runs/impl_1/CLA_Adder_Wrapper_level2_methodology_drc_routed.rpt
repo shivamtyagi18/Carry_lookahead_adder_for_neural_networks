@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2.1 (lin64) Build 2729669 Thu Dec  5 04:48:12 MST 2019
-| Date         : Fri May  1 22:52:16 2020
+| Date         : Wed Jul  1 09:21:36 2020
 | Host         : ubuntu running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_methodology -file CLA_Adder_Wrapper_level2_methodology_drc_routed.rpt -pb CLA_Adder_Wrapper_level2_methodology_drc_routed.pb -rpx CLA_Adder_Wrapper_level2_methodology_drc_routed.rpx
 | Design       : CLA_Adder_Wrapper_level2
@@ -23,702 +23,485 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 99
-+--------+----------+------------------------------------------+------------+
-| Rule   | Severity | Description                              | Violations |
-+--------+----------+------------------------------------------+------------+
-| XDCH-2 | Warning  | Same min and max delay values on IO port | 99         |
-+--------+----------+------------------------------------------+------------+
+             Violations found: 77
++-----------+------------------+------------------------------------------+------------+
+| Rule      | Severity         | Description                              | Violations |
++-----------+------------------+------------------------------------------+------------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell              | 32         |
+| XDCH-2    | Warning          | Same min and max delay values on IO port | 45         |
++-----------+------------------+------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-17#1 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#19 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#20 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#21 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#22 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#23 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#24 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#25 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#30 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#31 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#32 Critical Warning
+Non-clocked sequential cell  
+The clock pin pc_reg/q_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
 XDCH-2#1 Warning
 Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[0]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+The same input delay of 1.000 ns has been defined on port 'Q[0]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
 Related violations: <none>
 
 XDCH-2#2 Warning
 Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[10]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+The same input delay of 1.000 ns has been defined on port 'Q[1]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
 Related violations: <none>
 
 XDCH-2#3 Warning
 Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[11]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+The same input delay of 1.000 ns has been defined on port 'en' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
 Related violations: <none>
 
 XDCH-2#4 Warning
 Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[12]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+The same input delay of 1.000 ns has been defined on port 'rst' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
 Related violations: <none>
 
 XDCH-2#5 Warning
 Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[13]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#6 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[14]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#7 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[15]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#8 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[16]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#9 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[17]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#10 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[18]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#11 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[19]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#12 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[1]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#13 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[20]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#14 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[21]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#15 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[22]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#16 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[23]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#17 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[24]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#18 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[25]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#19 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[26]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#20 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[27]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#21 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[28]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#22 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[29]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#23 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[2]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#24 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[30]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#25 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[31]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#26 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[3]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#27 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[4]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#28 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[5]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#29 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[6]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#30 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[7]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#31 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[8]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#32 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_A[9]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#33 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[0]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#34 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[10]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#35 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[11]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#36 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[12]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#37 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[13]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#38 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[14]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#39 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[15]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#40 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[16]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#41 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[17]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#42 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[18]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#43 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[19]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#44 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[1]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#45 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[20]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#46 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[21]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#47 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[22]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#48 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[23]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#49 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[24]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#50 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[25]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#51 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[26]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#52 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[27]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#53 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[28]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#54 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[29]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#55 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[2]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#56 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[30]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#57 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[31]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#58 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[3]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#59 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[4]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#60 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[5]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#61 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[6]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#62 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[7]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#63 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[8]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#64 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'data_in_B[9]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#65 Warning
-Same min and max delay values on IO port  
-The same input delay of 1.000 ns has been defined on port 'en_5' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
-set_input_delay -clock [get_clocks sys_clk_pin] 1.000 [get_ports * -filter {DIRECTION == IN && NAME !~ "clock"}]
-/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 4)
-Related violations: <none>
-
-XDCH-2#66 Warning
-Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[0]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#67 Warning
+XDCH-2#6 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[10]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#68 Warning
+XDCH-2#7 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[11]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#69 Warning
+XDCH-2#8 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[12]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#70 Warning
+XDCH-2#9 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[13]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#71 Warning
+XDCH-2#10 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[14]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#72 Warning
+XDCH-2#11 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[15]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#73 Warning
+XDCH-2#12 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[16]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#74 Warning
+XDCH-2#13 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[17]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#75 Warning
+XDCH-2#14 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[18]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#76 Warning
+XDCH-2#15 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[19]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#77 Warning
+XDCH-2#16 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[1]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#78 Warning
+XDCH-2#17 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[20]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#79 Warning
+XDCH-2#18 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[21]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#80 Warning
+XDCH-2#19 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[22]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#81 Warning
+XDCH-2#20 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[23]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#82 Warning
+XDCH-2#21 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[24]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#83 Warning
+XDCH-2#22 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[25]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#84 Warning
+XDCH-2#23 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[26]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#85 Warning
+XDCH-2#24 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[27]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#86 Warning
+XDCH-2#25 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[28]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#87 Warning
+XDCH-2#26 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[29]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#88 Warning
+XDCH-2#27 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[2]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#89 Warning
+XDCH-2#28 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[30]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#90 Warning
+XDCH-2#29 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[31]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#91 Warning
+XDCH-2#30 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[32]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#92 Warning
+XDCH-2#31 Warning
+Same min and max delay values on IO port  
+The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[33]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
+Related violations: <none>
+
+XDCH-2#32 Warning
+Same min and max delay values on IO port  
+The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[34]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
+Related violations: <none>
+
+XDCH-2#33 Warning
+Same min and max delay values on IO port  
+The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[35]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
+Related violations: <none>
+
+XDCH-2#34 Warning
+Same min and max delay values on IO port  
+The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[36]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
+Related violations: <none>
+
+XDCH-2#35 Warning
+Same min and max delay values on IO port  
+The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[37]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
+Related violations: <none>
+
+XDCH-2#36 Warning
+Same min and max delay values on IO port  
+The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[38]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
+Related violations: <none>
+
+XDCH-2#37 Warning
+Same min and max delay values on IO port  
+The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[39]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
+Related violations: <none>
+
+XDCH-2#38 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[3]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#93 Warning
+XDCH-2#39 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[4]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#94 Warning
+XDCH-2#40 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[5]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#95 Warning
+XDCH-2#41 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[6]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#96 Warning
+XDCH-2#42 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[7]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#97 Warning
+XDCH-2#43 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[8]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#98 Warning
+XDCH-2#44 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'data_out_from_R0[9]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 /home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/constrs_1/new/CLA_adder.xdc (Line: 5)
 Related violations: <none>
 
-XDCH-2#99 Warning
+XDCH-2#45 Warning
 Same min and max delay values on IO port  
 The same output delay of 2.000 ns has been defined on port 'done' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks sys_clk_pin] 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]

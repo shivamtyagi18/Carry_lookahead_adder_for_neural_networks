@@ -25,28 +25,34 @@ module cla_TB #(parameter  size_of_vectors = 32, Word_size = 8, Max_Quantization
     input reg [1:0] Q, 
     input reg clock, reset,
     output [Max_Quantization+Word_size-1:0] data_out_from_R0,
-    input reg [Desired_Quantization-1:0] data_in_A, data_in_B
+    output reg done
+    //input reg [Desired_Quantization-1:0] data_in_A, data_in_B
 //    output [Word_size-1:0] data_out_A [Desired_Quantization-1:0], data_out_B [Desired_Quantization-1:0]
     );
     
+    reg rst;
+    
     CLA_Adder_Wrapper_level2 instance_tb(
     .en ( en ),
+    .rst(rst),
     .Q (Q),
   	.clock (clock),
   	.data_out_from_R0(data_out_from_R0),
-  	.data_in_A(data_in_A),
-    .data_in_B(data_in_B)
+//  	.data_in_A(data_in_A),
+//    .data_in_B(data_in_B)
+    .done(done)
     
     );
     
-    reg [Desired_Quantization-1:0] data_in_A_start, data_in_B_start;
+//    reg [Desired_Quantization-1:0] data_in_A_start, data_in_B_start;
     integer i;
+    wire reset_local;
+    assign reset_local = done;
     
     
     
     initial begin
       clock = 0; 
-      Q = 2'b 0;
 //      reset = 1;
     end 
       
@@ -55,30 +61,27 @@ module cla_TB #(parameter  size_of_vectors = 32, Word_size = 8, Max_Quantization
     
     initial begin
     
-        en = 5'd0;
+       en = 0;
+        rst = 1;
+        //done = 0;
         
-        #10
-//        reset = 0;
-        
-        #10
-         
-        
-        en = 5'b1;
-//        mux_sel_5 = 5'b1; // for 32-bit quantization
+        #20
+        en = 1;
+        rst = 0;
     
     end
     
     
     initial
         begin
-        
+        Q = 2'b 00;
 //        #20
 //        data_in_A = 32'd 15;
 //        data_in_B = 32'd 10;
 
         // initial values of inputs to start
-        data_in_A_start = 32'h 12345678;
-        data_in_B_start = 32'h 23456789;
+//        data_in_A_start = 32'h 12345678;
+//        data_in_B_start = 32'h 23456789;
         
         #20
         
@@ -86,13 +89,16 @@ module cla_TB #(parameter  size_of_vectors = 32, Word_size = 8, Max_Quantization
         
         for (i = 0; i < 3; i = i + 1)
             begin
+                
         
-                #80
+                #160;
 //                data_in_A = data_in_A_start + i;
 //                data_in_B = data_in_B_start + i;
-                data_in_A = data_in_A_start + i*(32'h11111111);
-                data_in_B = data_in_B_start + i*(32'h11111111);
-        end 
+//                data_in_A = data_in_A_start + i*(32'h11111111);
+//                data_in_B = data_in_B_start + i*(32'h11111111);
+        end
+        
+        #40; 
         
         $stop;
 

@@ -1,0 +1,3 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+$stop called at time : 260 ns : File "/home/shivamtyagi/Carry_Lookahead_Adder/Carry_Lookahead_Adder.srcs/sim_1/new/cla_TB.sv" Line 101
